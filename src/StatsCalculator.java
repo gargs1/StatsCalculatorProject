@@ -1,4 +1,10 @@
 import java.util.Arrays;
+
+/**
+ * This class performs different calculation
+ * in relation to statistics like a calculator
+ * would automate its math
+ */
 public class StatsCalculator {
 
   private double[] values;
@@ -13,11 +19,12 @@ public class StatsCalculator {
     }
 
     /**
+     *Constructs a stats calculator
      *
      * @param list is the values in the array
      */
   public StatsCalculator(double[] list) {
-    values = param;
+    values = list;
     }
 
     /**
@@ -60,8 +67,9 @@ public class StatsCalculator {
         return max;
     }
     /**
+     *Finds or calculates the first quartile value in the array
      *
-     *
+     * @return firstQuartile of the array
      */
     public double calculateFirstQuartile() {
         double firstQ = 0;
@@ -75,7 +83,9 @@ public class StatsCalculator {
         return firstQ;
     }
     /**
+     *Finds or calculates the third quartile value in the array
      *
+     * @return thirdQuartile of the array
      */
     public double calculateThirdQuartile() {
    double thirdQ = 0;
@@ -89,7 +99,11 @@ public class StatsCalculator {
         return thirdQ;
 }
     /**
+     *Calculate the median by finding the middle index or
+     * finding the average between the two middle indexes
+     * values stored.
      *
+     * @return median
      */
     public double calculateMedian() {
         double median = 0;
@@ -103,7 +117,10 @@ public class StatsCalculator {
         }
 
     /**
+     *Calculates the average number value within the
+     *  values array
      *
+     * @return mean which is the average
      */
         public double calculateMean() {
         double mean = 0;
@@ -115,7 +132,9 @@ public class StatsCalculator {
             }
 
         /**
+         *Calculate the sum of the values in the array
          *
+         * @return sum of values in the area
          */
         public double calculateSum() {
         double sum = 0;
@@ -126,6 +145,10 @@ public class StatsCalculator {
         }
 
         /**
+         *Runs through a for loop and prints out
+         * every value in the values array with a space in between
+         * each person.
+         *
          *
          */
         public void print() {
@@ -137,6 +160,9 @@ public class StatsCalculator {
         }
 
         /**
+         *Goes through a for loop and prints out every value in
+         * the sorted values array with a space in between
+         *
          *
          */
         public void printSorted() {
@@ -145,6 +171,13 @@ public class StatsCalculator {
                 System.out.println(i + " ") ;
             }
         }
+
+    /**
+     *Prints out all 5 metrics the calculator is intended to
+     *calculate. Make a call to every method and be given a subheading
+     * for each metric.
+     *
+     */
         public void printFiveNumberSummary() {
             System.out.println("The five number summary is:");
             System.out.println("Minimum: " + calculateMin());
