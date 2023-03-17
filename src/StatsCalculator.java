@@ -4,18 +4,37 @@ public class StatsCalculator {
   private double[] values;
   private double[] sortedValues;
 
+    /**
+     *Makes a default array of 20 values that are set to 0
+     *
+     */
   public StatsCalculator() {
     values = new double[20];
     }
-  public StatsCalculator(double[] param) {
+
+    /**
+     *
+     * @param list is the values in the array
+     */
+  public StatsCalculator(double[] list) {
     values = param;
     }
 
+    /**
+     *Assigns values array to a new variable called sortedValues
+     *Sorts the numbers of the array values into ascending order.
+     *
+     */
   public void sortData() {
       sortedValues = values;
     Arrays.sort(sortedValues);
   }
 
+    /**
+     *Finds the minimum value in the array
+     *
+     * @return min value of the array
+     */
   public double calculateMin() {
     double min = values[0];
       for(int i = 0; i < values.length; i++) {
@@ -26,6 +45,11 @@ public class StatsCalculator {
             return min;
 
         }
+    /**
+     *Finds the maximum value in the array
+     *
+     * @return max value of the array
+     */
     public double calculateMax() {
         double max = values[0];
         for(int y = 0; y < values.length; y++) {
@@ -35,6 +59,10 @@ public class StatsCalculator {
         }
         return max;
     }
+    /**
+     *
+     *
+     */
     public double calculateFirstQuartile() {
         double firstQ = 0;
         if((sortedValues.length) % 4 <= 1) {
@@ -46,7 +74,9 @@ public class StatsCalculator {
         }
         return firstQ;
     }
-
+    /**
+     *
+     */
     public double calculateThirdQuartile() {
    double thirdQ = 0;
         if((sortedValues.length) % 4 <= 1) {
@@ -58,7 +88,9 @@ public class StatsCalculator {
     }
         return thirdQ;
 }
-
+    /**
+     *
+     */
     public double calculateMedian() {
         double median = 0;
         if(sortedValues.length % 2 == 0) {
@@ -70,6 +102,9 @@ public class StatsCalculator {
         return median;
         }
 
+    /**
+     *
+     */
         public double calculateMean() {
         double mean = 0;
         for (int a = 0; a < sortedValues.length; a++) {
@@ -79,6 +114,9 @@ public class StatsCalculator {
           return mean;
             }
 
+        /**
+         *
+         */
         public double calculateSum() {
         double sum = 0;
         for(int i = 0; i < sortedValues.length; i++) {
@@ -86,6 +124,10 @@ public class StatsCalculator {
         }
         return sum;
         }
+
+        /**
+         *
+         */
         public void print() {
             System.out.println("Your data is: ");
             for(double z: values) {
@@ -93,6 +135,10 @@ public class StatsCalculator {
             }
 
         }
+
+        /**
+         *
+         */
         public void printSorted() {
             System.out.println("Your sorted data is: ");
             for (double i : sortedValues) {
@@ -104,7 +150,7 @@ public class StatsCalculator {
             System.out.println("Minimum: " + calculateMin());
             System.out.println("First Quartile: " + calculateFirstQuartile());
             System.out.println("Median: " + calculateMedian());
-            //System.out.println("Third Quartile: " + calculateThirdQuartile());
+            System.out.println("Third Quartile: " + calculateThirdQuartile());
             System.out.println("Maximum: " + calculateMax());
 
         }
