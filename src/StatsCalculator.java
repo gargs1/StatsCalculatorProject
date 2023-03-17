@@ -1,23 +1,26 @@
 import java.util.Arrays;
 public class StatsCalculator {
-    private double[] values;
-    private double[] sortedValues;
 
-    public StatsCalculator() {
-        values = new double[20];
+  private double[] values;
+  private double[] sortedValues;
+
+  public StatsCalculator() {
+    values = new double[20];
     }
-    public StatsCalculator(double[] param) {
-        values = param;
+  public StatsCalculator(double[] param) {
+    values = param;
     }
 
-    public void sortData() {
-        Arrays.sort(values);
-    }
-    public double calculateMin() {
-        double min = values[0];
-        for(int i = 0; i < values.length; i++) {
-                if(values[i] < min) {
-                    min = values[i];
+  public void sortData() {
+      sortedValues = values;
+    Arrays.sort(sortedValues);
+  }
+
+  public double calculateMin() {
+    double min = values[0];
+      for(int i = 0; i < values.length; i++) {
+        if(values[i] < min) {
+          min = values[i];
                 }
             }
             return min;
@@ -34,40 +37,75 @@ public class StatsCalculator {
     }
     public double calculateFirstQuartile() {
         double firstQ = 0;
-        if((values.length) % 4 == 0) {
-            firstQ = (values[values.length / 4] + values[values.length / 4 + 1]) /2;
+        if((sortedValues.length) % 4 <= 1) {
+            firstQ = (sortedValues[((sortedValues.length) / 4)] + sortedValues[(sortedValues.length) / 4 - 1]) /2;
         }
         else {
-            firstQ = (values[values.length / 4])
+            firstQ = (sortedValues[sortedValues.length / 4]);
 
         }
         return firstQ;
     }
 
-   // public double calculateThirdQuartile() {
-  //  }
+    public double calculateThirdQuartile() {
+   double thirdQ = 0;
+        if((sortedValues.length) % 4 <= 1) {
+        thirdQ = (sortedValues[((sortedValues.length) * 3 / 4)] + sortedValues[(sortedValues.length) * 3 / 4 - 1]) /2;
+        }
+        else {
+        thirdQ = (sortedValues[sortedValues.length * 3 / 4]);
+
+    }
+        return thirdQ;
+}
 
     public double calculateMedian() {
         double median = 0;
-        if(values.length % 2 <= 1) {
-            median = (values[values.length / 2] + values[values. length / 2 - 1]);
+        if(sortedValues.length % 2 == 0) {
+            median = (sortedValues[sortedValues.length / 2] + sortedValues[sortedValues. length / 2 - 1])/2;
         }
         else {
-            median = values[values.length / 2];
+            median = sortedValues[sortedValues.length / 2];
             }
         return median;
         }
 
         public double calculateMean() {
         double mean = 0;
-        for (int a = 0; a < values.length; a++) {
-            mean += values[a];
+        for (int a = 0; a < sortedValues.length; a++) {
+            mean += sortedValues[a];
         }
-          mean /= values.length;
+          mean /= sortedValues.length;
           return mean;
             }
 
-        public double calculate
+        public double calculateSum() {
+        double sum = 0;
+        for(int i = 0; i < sortedValues.length; i++) {
+            sum += sortedValues[i];
+        }
+        return sum;
+        }
+        public void print() {
+            System.out.println("Your data is: ");
+            for(double z: values) {
+            System.out.println(z + " ");
+            }
+
+        }
+        public void printSorted() {
+            System.out.println("Your sorted data is: ");
+            for (double i : sortedValues) {
+                System.out.println(i + " ") ;
+            }
+        }
         public void printFiveNumberSummary() {
+            System.out.println("The five number summary is:");
+            System.out.println("Minimum: " + calculateMin());
+            System.out.println("First Quartile: " + calculateFirstQuartile());
+            System.out.println("Median: " + calculateMedian());
+            //System.out.println("Third Quartile: " + calculateThirdQuartile());
+            System.out.println("Maximum: " + calculateMax());
+
         }
 }

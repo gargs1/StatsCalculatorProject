@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bb33bba-1bde-4f50-be1f-6974d0a6b6d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StatsCalculator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StatsCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StatsCalculatorRunner.java" afterDir="false" />
+    <list default="true" id="9bb33bba-1bde-4f50-be1f-6974d0a6b6d9" name="Changes" comment="Initial work on project.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StatsCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatsCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StatsCalculatorRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatsCalculatorRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +46,16 @@
       <option name="presentableId" value="Default" />
       <updated>1678383505292</updated>
       <workItem from="1678383507455" duration="716000" />
-      <workItem from="1678810357405" duration="7529000" />
+      <workItem from="1678810357405" duration="17197000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial work on project.">
+      <created>1678923058746</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678923058746</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -68,5 +71,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial work on project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial work on project." />
   </component>
 </project>
